@@ -1,1 +1,57 @@
-hello world
+<!DOCTYPE html>
+    <head>
+    </head>
+    <body>
+        <h2>install</h2>
+        <h2>usage</h2>
+        <h2>examples</h2>
+        <video id="video" width="480" height="320" muted autoplay controls>
+            <source src="/static/bbibbi.mp4" type="video/mp4">
+        </video>
+        <canvas id="ex1-cvs" width="480" height="320"></canvas>
+    </body>
+</html>
+
+<script src="./dist/canvas-lyrics.js" type="text/javascript">
+    console.log("script");
+    var lyrics = [
+        {
+            start: 6,
+            end: 12,
+            text: [
+            "Hi there 인사해 호들갑 없이",
+            ],
+            words: [
+            9.5, 9.8, 10.3, 11.2, 11.6,
+            ],
+            fstyle: [
+
+            ],
+            bstyle: [
+
+            ]
+        },
+        {
+            start: 12,
+            end: 15.2,
+            text: [
+            "시작해요 서론 없이"
+            ],
+            words: [
+            13.7, 14.5, 15
+            ],
+            style: [
+
+            ]
+        }
+    ];
+    window.onload = (event) => {
+        console.log('page is fully loaded');
+        var canvas = document.getElementById("ex1-cvs");
+        var cvs = new CanvasLyrics(
+            document.getElementById("video"), canvas.getContext("2d"),
+            lyrics, 480, 320);
+    };
+    
+
+</script>
