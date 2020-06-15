@@ -1,4 +1,4 @@
-export default class CanvasLyrics {
+class CanvasLyrics {
   constructor(player, context, lyrics, width, height) {
     this.player = player;
     this.ctx = context;
@@ -11,7 +11,7 @@ export default class CanvasLyrics {
 
     // Check if video element
     if(this.player.nodeName === "VIDEO") {
-      this.time = function() { return this.player.currentTime};
+      console.log("hi");
     }
     // Check if audio alement
     else if (this.player.nodeName === "AUDIO") {
@@ -21,7 +21,6 @@ export default class CanvasLyrics {
     // Check if youtube player
     else if (this.player instanceof YT.Player) {
       console.log("ytplayer");
-      this.time = this.player.getCurrentTime
 
       // add player state change
     }

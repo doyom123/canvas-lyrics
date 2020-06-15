@@ -2,6 +2,8 @@
 ---
 <!DOCTYPE html>
     <head>
+        <link rel="shortcut icon" href="#">
+        <script src="./src/canvas-lyrics.js"></script>
     </head>
     <body>
         <h2>install</h2>
@@ -11,4 +13,40 @@
             <source src="{{site.baseurl}}/static/bbibbi.mp4" type="video/mp4">
         </video>
     </body>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var lyrics = [
+            {
+                start: 6,
+                end: 12,
+                text: [
+                "Hi there 인사해 호들갑 없이",
+                ],
+                words: [
+                9.5, 9.8, 10.3, 11.2, 11.6,
+                ],
+                fstyle: [
+
+                ],
+                bstyle: [
+
+                ]
+            },
+            {
+                start: 12,
+                end: 15.2,
+                text: [
+                "시작해요 서론 없이"
+                ],
+                words: [
+                13.7, 14.5, 15
+                ],
+                style: [
+
+                ]
+            }
+        ];
+        var cvs = CanvasLyrics(document.getElementById('video'), canvas.getContext('2d'), lyrics, 480, 320);
+    </script>
 </html>
+
